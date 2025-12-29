@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blow The Birthday Cake 🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cake-container">
+        <a href="index.html" class="back-btn">← Back Home</a>
+        
+        <div class="cake-section">
+            <h1>Happy Birthday🥳💐</h1>
+            <h1>Make A Wish & Blow The Candles! 🎂</h1>
+            <p class="instruction"></p>
+
+        <div class="cake-wrapper">
+            <svg class="cake-svg" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Cake Base -->
+                <rect x="50" y="200" width="200" height="120" fill="#D4A574" stroke="#8B6F47" stroke-width="2" rx="5"/>
+                <rect x="50" y="180" width="200" height="30" fill="#E8C4A0" stroke="#8B6F47" stroke-width="2"/>
+                
+                <!-- Cake Frosting Pattern -->
+                <circle cx="80" cy="215" r="8" fill="#FF69B4"/>
+                <circle cx="130" cy="210" r="8" fill="#FFB6C1"/>
+                <circle cx="180" cy="215" r="8" fill="#FF69B4"/>
+                <circle cx="100" cy="250" r="8" fill="#FFB6C1"/>
+                <circle cx="150" cy="255" r="8" fill="#FF69B4"/>
+                <circle cx="200" cy="250" r="8" fill="#FFB6C1"/>
+
+                <!-- Candles -->
+                <rect class="candle" x="70" y="120" width="8" height="60" fill="#FFD700"/>
+                <rect class="candle" x="110" y="130" width="8" height="50" fill="#FFD700"/>
+                <rect class="candle" x="150" y="125" width="8" height="55" fill="#FFD700"/>
+                <rect class="candle" x="190" y="135" width="8" height="45" fill="#FFD700"/>
+                <rect class="candle" x="230" y="128" width="8" height="52" fill="#FFD700"/>
+
+                <!-- Flames -->
+                <g class="flame" id="flame1">
+                    <path d="M 74 120 Q 70 100 74 80 Q 78 100 74 120" fill="#FF6347" opacity="0.9"/>
+                </g>
+                <g class="flame" id="flame2">
+                    <path d="M 114 130 Q 110 110 114 90 Q 118 110 114 130" fill="#FF6347" opacity="0.9"/>
+                </g>
+                <g class="flame" id="flame3">
+                    <path d="M 154 125 Q 150 105 154 85 Q 158 105 154 125" fill="#FF6347" opacity="0.9"/>
+                </g>
+                <g class="flame" id="flame4">
+                    <path d="M 194 135 Q 190 115 194 95 Q 198 115 194 135" fill="#FF6347" opacity="0.9"/>
+                </g>
+                <g class="flame" id="flame5">
+                    <path d="M 234 128 Q 230 108 234 88 Q 238 108 234 128" fill="#FF6347" opacity="0.9"/>
+                </g>
+            </svg>
+
+            <div class="wind-effect"></div>
+            <div class="particles"></div>
+        </div>
+
+            <button class="blow-btn" onclick="blowCandles()">🌬️ Blow Candles</button>
+            <button class="wish-btn" onclick="makeWish()">💫 Make A Wish First</button>
+
+            <div id="blown-message" class="blown-message hidden">
+                <h2>🎉 Wish Granted! 🎉</h2>
+                <p>Your candles are blown! Your wish will come true! 🌟</p>
+                <a href="notes.html" class="next-btn">View Surprise Notes →</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
